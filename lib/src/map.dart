@@ -75,12 +75,12 @@ class FlowMap {
   // Get Data
 
   /// Get the map value
-  get value {
+  Map get value {
     return _state.value;
   }
 
   /// Stream the map value
-  Observable get stream {
+  Observable<Map> get stream {
     return _state.stream;
   }
 

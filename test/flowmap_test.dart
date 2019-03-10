@@ -13,6 +13,7 @@ void main() {
   });
 
   test('initial store value matches seed', () {
+    store.stream;
     expect(store.value, equals(seed));
   });
 
