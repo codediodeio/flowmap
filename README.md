@@ -73,7 +73,7 @@ map.value; // Map
 Or you can listen to individual values by specifying a key. The stream will only emit on distinct changes to the value at this location. 
 
 ```dart
-Observable count$ = map.streamItem('count'); // Observable<dynamic>
+Observable<dynamic> count$ = map.streamItem('count'); // Observable<dynamic>
 
 int count = map.getItem('count'); // dynamic
 ```
