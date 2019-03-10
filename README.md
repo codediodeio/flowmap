@@ -5,13 +5,13 @@ A state management utility for Flutter that makes it easy to stream, slice, and 
 ## Why?
 
 
-The `Map` - when combined with RxDart - makes it possible to dynamically stream and share data in Flutter without boilerplate/configuration, leading to faster to prototyping of complex state relationships when compared to redux, inherited widgets, bloc, etc. 
+The `Map` - when combined with RxDart - makes it possible to dynamically stream and share data in Flutter without boilerplate/configuration, leading to faster prototyping of complex state relationships when compared to redux, inherited widgets, bloc, etc. 
 
 - Event-driven one-way data flow. 
 - Stream data globally or scoped to your widgets.
 - Repaint widgets on specific value changes or actions/events. 
 - Time-travel debugging with included devtools widget.
-- No boilerplate (unless you want it).
+- No boilerplate and does not take over your architecture.
 - Focused on simplicity and flexibility. 
 
 
@@ -52,7 +52,7 @@ The `FlowMap` is a key/value store similar to a Dart `Map`, but is treated like 
 
 ### Create
 
-Pass a an optional seed `Map` containing default values, otherwise it will start empty.
+Pass an optional seed `Map` containing default values or start empty.
 
 Keys must be strings. Values can be anything (but I would recommend using types that can be serialized). 
 
@@ -75,7 +75,7 @@ Or you can listen to individual values by specifying a key. The stream will only
 ```dart
 map.streamItem('count'); // Stream<dynamic>
 
-map.getItem('widget'); // dynamic
+map.getItem('count'); // dynamic
 ```
 
 

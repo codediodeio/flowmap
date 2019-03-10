@@ -1,8 +1,9 @@
 name: flowmap
-description: A new Flutter package project.
+description: A state management utility for streaming & slicing Dart maps 
 version: 0.0.1
-author:
-homepage:
+maintainer: Jeff Delaney (@jeffdelaney23)
+author: Jeff Delaney <hello@fireship.io>
+homepage: https://github.com/codediodeio/flowmap
 
 environment:
   sdk: ">=2.1.0 <3.0.0"

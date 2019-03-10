@@ -122,7 +122,7 @@ class FlowMap {
   }
 
   /// Creates or sets data at this key 
-  update(String key, dynamic data, { name = DefaultActions.update }) {
+  update(String key, dynamic data, { String name = DefaultActions.update }) {
     Action action = Action(name: '$name-$key', data: data, mutation: (Map state, data) {
       state[key] = data;
       return state;
@@ -131,7 +131,7 @@ class FlowMap {
   }
 
   /// Removes a key/value pair from the flowmap.
-  remove(String key, { name = DefaultActions.remove }) {
+  remove(String key, { String name = DefaultActions.remove }) {
     Action action = Action(name: '$name-$key', mutation: (Map state, data) {
       state.remove(key);
       return state;
@@ -152,7 +152,7 @@ class FlowMap {
   /// Updates the state with the value resolved from a future.
   /// Dispatches a START action when called.
   /// Dispatches a SUCCESS or ERROR action when completed.
-  Future<void> updateAsync(key, Future data, { name = DefaultActions.future }) async {
+  Future<void> updateAsync(key, Future data, { String name = DefaultActions.future }) async {
       action(name: '${name}_${DefaultActions.start}-$key');
     try {
       var next = await data;

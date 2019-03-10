@@ -20,7 +20,7 @@ dependencies:
   flutter:
     sdk: flutter
   
-  get_it: any
+  # get_it: any
   flowmap:
     path: ../
 
