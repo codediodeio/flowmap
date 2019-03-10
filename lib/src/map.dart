@@ -86,8 +86,8 @@ class FlowMap {
 
 
   /// Get a value from the map
-  getItem(String k) {
-    return _state.value[k];
+  getItem(String key) {
+    return _state.value[key];
   }
 
   // Stream a specifc key on map. It will only emit new data on distinct changes. 
